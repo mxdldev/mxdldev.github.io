@@ -1,628 +1,355 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+    <meta charset="utf-8">
+    
+    <title>
+        
+        ILS
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <link rel="shortcut icon" href="/images/favicon.png">
+    
+    
+<link rel="stylesheet" href="/css/style.css">
 
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    <script id="hexo-configurations">
+    let ILS = window.ILS || {};
+    let CONFIG = {"hostname":"example.com","root":"/","localsearch":{"enable":false,"trigger":"auto","unescape":false,"preload":false},"toc":{"enable":false,"number":true,"expand_all":true},"back2top":{"enable":true}};
   </script>
-
-  <meta name="description" content="门心叼龙，门心叼龙的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="门心叼龙的博客">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="门心叼龙的博客">
-<meta property="og:description" content="门心叼龙，门心叼龙的博客">
-<meta property="og:locale">
-<meta property="article:author" content="门心叼龙">
-<meta property="article:tag" content="门心叼龙">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://example.com/">
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-Hans'
-  };
-</script>
+<body>
+<div class="page-container">
 
-  <title>门心叼龙的博客</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">门心叼龙的博客</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">门心叼龙的博客</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
+    <header class="page-header">
+        <div class="header-progress"></div>
     </header>
 
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+    <main class="page-main">
 
+        <div class="page-main-content">
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
+            <div class="page-main-content-top">
+                <header class="header-wrapper">
 
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/01/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88%EF%BC%9A%E8%AF%B4%E8%AF%B4%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E7%9A%84%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF/">
+    <div class="header-content">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="门心叼龙">
-      <meta itemprop="description" content="门心叼龙，门心叼龙的博客">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="门心叼龙的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/01/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88%EF%BC%9A%E8%AF%B4%E8%AF%B4%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E7%9A%84%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF/" class="post-title-link" itemprop="url">开发杂谈：说说数据结构和算法的那点事儿</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-11-01 22:11:19 / 修改时间：22:12:30" itemprop="dateCreated datePublished" datetime="2020-11-01T22:11:19+08:00">2020-11-01</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/" itemprop="url" rel="index"><span itemprop="name">开发杂谈</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>程序设计的本质是对确定问题选择一个好的数据结构，加上设计一个好的算法，程序设计 = 数据结构 + 算法</p>
-</blockquote>
-<p>本文出自门心叼龙的博客，属于原创类容，转载请注明出处。<a target="_blank" rel="noopener" href="https://menxindiaolong.blog.csdn.net/article/details/96620117">https://menxindiaolong.blog.csdn.net/article/details/96620117</a></p>
-<p>上个月我在公司面试了两个Android程序员，都是工作了四五年的程序员，面试一开始就问到了数据结构问题，常用的数据结构都有哪些？小伙子直接说数据结构在自己平时开发的时候根本就用不上。</p>
-<p>在我们日常开发过程中，很多时候只关注界面和用户体验，对数据结构和算法这块要求并不高，很多程序员codeing能力很强，但一问到一些底层基础知识就发蒙，很多程序员抱怨面试造飞机，实际工作拧螺丝，面试问的基础知识与实际工作毫无联系，但公司的真正目的是在考察你的基本功，以此来判断你之后能否成长为他们最终需要的高级人才，数据结构与算法这是编程基础，基础不牢，地动山摇。</p>
-<p>可能有些人会质疑：数据底层存储结构都不理解，codeing能力能很强？其实这也见怪不怪，就好比有人他的开车技术很高超，开的很溜，但是发动机的工作原理它懂吗？他不懂，但是他车开的确实很好，写程序也是一样的道理，有的程序员他就停留在用的阶段，用的很熟练，但是底层原理他不一定知道，再之干这一样非科班出身、转行做技术的程序员也不在少数，有的培训机构出来的，他们不一定都会先去专业的去学习数据结构和算法，这就会导致有些人工作好几年了，但是对数据结构这块的知识还是一知半解。</p>
-<p>在去年的9月份，阿里巴巴搞了一个全球数学竞赛，一石激起千层浪，各路豪杰纷纷参战，移动互联网的狂潮已经结束了，下一个风口将是人工智能，搞人工智能就离不开数学算法，阿里醉翁之意不在酒，而在抢夺全球的顶尖级数学人才，可见算法的重要性。</p>
-<p>在<a target="_blank" rel="noopener" href="https://menxindiaolong.blog.csdn.net/article/details/88083415">后移动互联网时代我的一些思考</a>这篇文章我曾说过，初级程序员写UI，中级程序员写框架，高级程序员写算法，写程序写到最后都是在写算法，程序员最后拼的都是算法，在人类发展的历史长河中，我们的前辈给我们留下了很多很经典的算法，这都是人类智慧的结晶，有人写了一篇文章<a target="_blank" rel="noopener" href="https://www.csdn.net/article/2011-01-12/289993">细数二十世纪最伟大的10大算法</a>，感兴趣的可以去看一看。既然数据结构和算法这么重要，那么今天我决定写一篇关于数据结构和算法的入门文章，起到抛砖引玉的作用，希望你能够喜欢上数据结构和算法。<br><img src="https://img-blog.csdnimg.cn/20190721221703712.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9tZW54aW5kaWFvbG9uZy5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h3 id="什么是数据"><a href="#什么是数据" class="headerlink" title="什么是数据"></a>什么是数据</h3><p>说到数据我们很容易就会想到：整型，浮点型，还包括音频，视频，图像，这都是数据，整型，浮点型可以进行数值运算，音频，视频，图像数据可以通过编码手段手段变成字符数据来处理，他们都有一个共同的特点，可以输入到计算机当中，能被计算机程序处理。</p>
-<h3 id="什么是数据结构"><a href="#什么是数据结构" class="headerlink" title="什么是数据结构"></a>什么是数据结构</h3><p>数据相互之间存在一种或多种特定关系的数据元素的集合，这是数据结构的概念，我们可以概括为四个字就是“数据集合”，他是一堆数据，而不是一个数据，另外数据和数据之间存在一定的关系，这种关系是指一对一的关系，或一对多的关系，或者多对对的关系，编写一个好的程序必须要分析待处理数据对象的特性以及各处理数据对象之间存在的关系，这也是就研究数据结构的意义所在。</p>
-<h3 id="数据结构的分类"><a href="#数据结构的分类" class="headerlink" title="数据结构的分类"></a>数据结构的分类</h3><p>数据结构分为逻辑机构和物理结构</p>
-<p><strong>逻辑结构：数据元素之间存在的关系</strong></p>
-<ul>
-<li>1.集合结构：集合结构中的元素除了属于一个集合之外，他们之间没有其他的关系，各个数据元素是平等的，他们共同的属性就是“属于同一个集合”<br><img src="https://img-blog.csdnimg.cn/20190721232317104.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9tZW54aW5kaWFvbG9uZy5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-<li>2.线性结构：线性结构中的数据元素之间是一对一的关系<br><img src="https://img-blog.csdnimg.cn/20190721232357748.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9tZW54aW5kaWFvbG9uZy5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-<li>3.树形结构：树形结构中的数据元素之间是一种一对多的层次关系<br><img src="https://img-blog.csdnimg.cn/20190721232414158.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9tZW54aW5kaWFvbG9uZy5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-<li>4.图形结构：图形结构中的数据元素之间是一种多对多的关系<br><img src="https://img-blog.csdnimg.cn/20190721232426589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9tZW54aW5kaWFvbG9uZy5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-</ul>
-<p><strong>物理结构：是指数据的逻辑结构在计算机中的存储形式</strong></p>
-<ul>
-<li>1.顺序存储结构：是把元素存在地址连续的存储单元里，其数据间的逻辑关系和物理关系是一致的，这种数据结构很简单，就是排队站位，大家都按照顺序排好，每个人占一小段空间，大家谁也别插谁的队，数组就是这样的数据结构。当你告诉计算机，你要建立一个有9个元素的数组时，计算式就在内存中找了片空地，按照一个整形所占位置的大小乘以9，开辟一段连续的内存空间，于是第一个数组元素就放在第一个位置，第二个元素放在第二个位置，这样依次摆放。<br><img src="https://img-blog.csdnimg.cn/20190721234231775.png" alt="在这里插入图片描述"></li>
-<li>2.链式存储结构<br>在日常生活有很多这样的情况，我们去银行办理业务，或者去火车站去买票，都有这样的经历，一会儿有人插队，一会儿有人上厕所放弃排队，这样队伍当中就会添加新的成员，也有可能去掉老的元素，整个结构时刻都处于变化当中，显然，面对这样时长要变化的数据结构，顺序存储是不科学的。</li>
-</ul>
-<p>于是现在的银行，医院等地方，设置了排队系统，也就是每个人去了，先领一个号，等着叫号，叫到时再去办理业务或看病。在等待的时候，你爱在哪在哪，可以坐着，可以站着，甚至可以出去转一圈，只要及时回来就可以，你关注的是前一个号有没有叫到，叫到了，下一个就轮到你了。</p>
-<p>而链式结构和上面据的例子非常的类似，把数据元素存储在任意的存储单元里，这组存储单元可以是连续的，也可以是不连续的。数据元素的存储关系并不能反映数据元素的逻辑关系，因此需要一个指针在存储元素的地址，这样通过地址就可以找到相关联数据元素的位置。很显然，链式存储就灵活多了， 数据存在哪里并不重要，只要有一个指针存放了相应的地址就能找到它了。<br><img src="https://img-blog.csdnimg.cn/2019072123430965.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9tZW54aW5kaWFvbG9uZy5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>逻辑结构是面向问题的，而物理结构是面向计算机的，其基本的目标就要要把数据及逻辑关系存储存储到计算机内存当中。</p>
-<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>上面我们谈到了数据的存储问题，在计算机当中，内存也不是无限大的，你要计算一个1+1=2这样的整形数字的加法问题，显然不需要开辟很大的内存空间，于是就需要对数据进行分类，不同的数据类型占用了不同的存储空间大小。<br>java中八种基本数据类型所分配的存储空间大小：<br><img src="https://img-blog.csdnimg.cn/20190720213740756.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9tZW54aW5kaWFvbG9uZy5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>基本数据类型的取值范围：<br><img src="https://img-blog.csdnimg.cn/20190720213749938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9tZW54aW5kaWFvbG9uZy5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><p>讲完了数据结构的概念和分类，我们再来看看什么是算法，我们都听过高斯的故事，高斯9岁的时候，用很短的时间计算出了小学老师布置的任务：对自然数从1到100的求和。他所使用的方法是：对50对构造成和为101的数列求和（1+100，2+99，3+98……），同时得到结果：5050，高斯的求解的过程就是算法实现的过程，算法即“计算方法”，是解决特定问题所需要的步骤，在计算机中表现为指令的有限序列，每条指令表示一个或者多个操作。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int sum &#x3D; 0;</span><br><span class="line">    for(int i &#x3D; 0; i &lt; &#x3D; 100; i++) &#123;</span><br><span class="line">	sum +&#x3D; i;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-<p>上面这段代码就是1到100求和在计算机中的求解过程</p>
-<h3 id="算法特性"><a href="#算法特性" class="headerlink" title="算法特性"></a>算法特性</h3><p>算法具有五个基本特性：输入、输出、有穷性、确定性和可行性，输入和出处比较容易理解的</p>
-<ul>
-<li><p>输入：算法具有零个或者多个输入</p>
-</li>
-<li><p>输出：算法至少有一个或者多个输出。</p>
-</li>
-<li><p>有穷性：是指算法在执行有限的步骤之后，自动结束而不会出现无限循环，并且每一个步骤都在可以接受的时间内完成</p>
-</li>
-<li><p>确定性：算法的每一步都有确定的含义，不会产生二义性</p>
-</li>
-<li><p>可行性：算法的每一步都能通过有限的次数完成</p>
-<h3 id="算法的性能"><a href="#算法的性能" class="headerlink" title="算法的性能"></a>算法的性能</h3><p>衡量一个算法好坏的标准就是算法复杂度，算法复杂度分为时间复杂度和空间复杂度，时间复杂度是指执行算法所需要的时间 ；而空间复杂度是指执行这个算法所需要的内存空间。</p>
-</li>
-<li><p>*1. 时间复杂度：**</p>
-</li>
-<li><p>常数阶：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int num &#x3D; 0，n  &#x3D; 100;</span><br><span class="line">sum &#x3D; (1+n)*n&#x2F;2;</span><br><span class="line">System.out.println(&quot;value:&quot;+sum);</span><br></pre></td></tr></table></figure>
-<p>无论n为多少，这段程序的执行次数始终是3，所以他的时间复杂度为常数阶：O(1)</p>
-</li>
-<li><p>线性阶：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(int i &#x3D; 0; i &lt; n ; i++)&#123;</span><br><span class="line">      System.out.println(&quot;value:&quot;+i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这段代码，他的循环时间复杂度为O(n),因为循环体中的代码需要执行n次</p>
-</li>
-<li><p>对数阶：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int count &#x3D; 1；</span><br><span class="line">    while(count &lt; n)&#123;</span><br><span class="line">    	count &#x3D; count * 2;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<p>由于每次count乘以2之后，就距离n更近了一些，也就是说，有多少个2相乘以后大于n，则会退出循环，2的x次方 = n 得到 x = log2n，所以这个循环的复杂度为O(logn);</p>
-</li>
-<li><p>平方阶</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int i ,j;</span><br><span class="line">for(i &#x3D; 0; i &lt; n ; i++)&#123;</span><br><span class="line">   	for(j &#x3D; 0; j &lt; n ; j++)&#123;</span><br><span class="line">   		System.out.println(&quot;&quot;);</span><br><span class="line">   	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>外层循环的次数为n次，外层每循环一次内层循环的次数为n次，所以这段代码的时间复杂度为O(n²)</p>
-</li>
-</ul>
-<p><strong>常见的时间复杂度列表</strong><br>| 名称 |运行时间  |<br>|–|–|<br>|常数阶|O(1)|<br>|对数阶|O(logn)|<br>|线性阶|O(n)|<br>|nlogn阶|O(nlogn)|<br>|平方阶|O(n²)|<br>|立方阶|O(n³)|<br>|指数阶|O(2ⁿ)|<br>常用的时间复杂度所耗费的时间由小到大依次是：<br>O(1) &lt;O(logn)&lt;O(n)&lt;O(nlogn)&lt;O(n²)&lt;O(n³)&lt;O(2ⁿ)</p>
-<p><strong>2. 空间复杂度：</strong><br>空间复杂度是对一个算法在运行过程中临时占用存储空间大小的量度，记做S(n)=O(f(n))。比如直接插入排序的时间复杂度是O(n^2),空间复杂度是O(1) 。而一般的递归算法就要有O(n)的空间复杂度了，因为每次递归都要存储返回信息。一个算法的优劣主要从算法的执行时间和所需要占用的存储空间两个方面衡量。</p>
-<p><strong>3.时间复杂度和空间复杂度的相互关系</strong><br>对于一个算法，时间复杂度和空间复杂度往往是相互影响的。当追求一个较好的时间复杂度时，可能会使空间复杂度的性能变差，即可能导致占用较多的存储空间；反之，当追求一个较好的空间复杂度时，可能会使时间复杂度的性能变差，即可能导致占用较长的运行时间。另外，算法的所有性能之间都存在着或多或少的相互影响。因此，当设计一个算法(特别是大型算法)时，要综合考虑算法的各项性能，算法的使用频率，算法处理的数据量的大小，算法描述语言的特性，算法运行的机器系统环境等各方面因素，才能够设计出比较好的算法。</p>
-<h3 id="数据结构和算法的关系"><a href="#数据结构和算法的关系" class="headerlink" title="数据结构和算法的关系"></a>数据结构和算法的关系</h3><p>数据结构是算法实现的基础，算法总是要依赖于某种数据结构来实现的。往往是在发展一种算法的时候，构建了适合于这种算法的数据结构。 算法的操作对象是数据结构。算法的设计和选择要同时结合数据结构，简单地说数据结构的设计就是选择存储方式。算法设计的实质就是对实际问题要处理的数据选择一种恰当的存储结构，并在选定的存储结构上设计一个好的算法。算法设计必须考虑到数据结构，算法设计是不可能独立于数据结构的。<br><img src="https://img-blog.csdnimg.cn/20190721222011409.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9tZW54aW5kaWFvbG9uZy5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h3 id="常见的数据结构"><a href="#常见的数据结构" class="headerlink" title="常见的数据结构"></a>常见的数据结构</h3><p><strong>1.线性表</strong><br>| 存储方式|概念 |时间性能 |空间性能|<br>|-|-|-|-|<br>| 顺序存储|一段连续的存储单元 |查找快，插入慢，删除慢<br>查找：常数阶O(1)<br>插入：线性阶O(n)<br>删除：线性阶O(n) | 需要事先分配存储空间<br>分大了浪费，分小了容易溢出|<br>| 链式存储|一组任意的存储单元 | 查找慢，插入快，删除快<br>查找：线性阶O(n)<br>插入：常数阶O(1)<br>删除：常数阶O(1)|有需要的时候分配存储空间<br>元素个数不受限制 |<br><strong>2.栈和队列</strong><br>| 存储方式|概念 |时间性能 |空间性能|<br>|-|-|-|-|<br>|栈|只能在表尾进行<br>添加和删除的线性数据结构|根据存储结构决定|根据存储结构决定|<br>|队列|只能在一端进行插入操作<br>另一端进行删除操作的线性数据结构|根据存储结构决定|根据存储结构决定|<br><strong>3.树</strong><br> 前面我们一直在讲一对一的线程数据结构，现实中还有很多一对多的情况，具有一定层次关系的数据元素的集合就是树，我觉得如果你不是做很底层的开发（比如操作系统文件管理，数据库之类的），也不是专门搞算法的，用处不会很大，事实上很多高级树结构都是为了数据库而开发的，因为数据库要很高的效率。</p>
-<p> <strong>4.图</strong><br> 在线性表中，数据元素之间是被串起来的，仅有线性关系，每个元素只有一个直接前驱和直接后继。在树形结构中，数据元素之间有明显的层次关系并且每一层上的数据元素可能和下一层多个元素有关，但只能和上一层中的一个元素相关。这和一对父母可以有多个孩子，但每个孩子却只能有一对父母是一个道理。可现实中，人与人之间的关系非常复杂，比如我认识的朋友，他们之间也可能相互认知，这就不是简单的一对一，一对多的关系了，研究人际关系自然会考虑多对多的情况，这种数据结构就是图，图是一种比线性表和树更加复杂的数据结构，在图的数据结构中，节点之间的关系可以是任意的，图中的任意两个元素之间都有可能有关。</p>
-<h3 id="Java数据结构框架类图"><a href="#Java数据结构框架类图" class="headerlink" title="Java数据结构框架类图"></a>Java数据结构框架类图</h3><p><strong>1.单列表</strong><br><img src="https://img-blog.csdnimg.cn/20190721184910459.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9tZW54aW5kaWFvbG9uZy5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>2.双列表</strong><br><img src="https://img-blog.csdnimg.cn/20190721190704298.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9tZW54aW5kaWFvbG9uZy5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>我们在前面提到的集合其实是有很多用途的，散列表也算是集合的一种，为什么需要散列表呢？实际上顺序存储结构需要一个一个的按顺序访问元素，当数据总量比较大，而且这个元素比较靠后的，性能就会降低。那么散列表是一种空间换时间的存储结构，我们想一下，若在手机的通讯录中查找一个人，那我们应该不会从第一个人一直找下去，因为这样实在太慢了。我们其实是这样做的，首先看这个人的首字母是什么，比如姓张，那么我们一定会滑倒最后，因为“Z”姓的名字都在后面，还有在查字典时，要查找一个单词，肯定不会从头翻到尾，而是首先通过这个单词的首字母，找到第二个字母，第三个字母……这样可以快速的跳到那个单词所在的页。其实这就是散列表的思想，散列表，又叫哈希表，是能够通过给定的关键字的值直接访问到具体对应值得一个数据结构。也就是说，把关键字映射到一个表中的位置来直接访问记录，以加快访问的速度。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>我们从数据，数据结构，算法，数据结构和算法的关系，常见的数据结构，Java数据结构框架这六个方面，循序渐进把把数据结构和算法基本就讲完了，大家也有个大致的了解，其实数据结构和算法涉及到的知识点远远不止这一点，我只是挑了一些工作实战中常用的数据结构讲了一下，以后还需要大量的算法练习来提升自己的算法内功修炼，做了这么多年技术，我一直在思考，我们每天在codeing到底在做什么？其实程序设计的本质是对确定问题选择一个好的数据结构，加上设计一个好的算法，就这么简单，程序设计 = 数据结构 + 算法。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/01/okhttp%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%EF%BC%8C%E5%BA%94%E7%94%A8%E8%AF%A6%E8%A7%A3%E4%B8%8E%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="门心叼龙">
-      <meta itemprop="description" content="门心叼龙，门心叼龙的博客">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="门心叼龙的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/01/okhttp%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%EF%BC%8C%E5%BA%94%E7%94%A8%E8%AF%A6%E8%A7%A3%E4%B8%8E%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/" class="post-title-link" itemprop="url">okhttp视频教程，应用详解与源码解析</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-11-01 20:50:18 / 修改时间：20:53:09" itemprop="dateCreated datePublished" datetime="2020-11-01T20:50:18+08:00">2020-11-01</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OkHttp/" itemprop="url" rel="index"><span itemprop="name">OkHttp</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>这期专栏的题目为okhttp的应用详解与源码解析，我们知道okhttp是一个网络通信框架，之所以选择网络通信这个主题，这是因为我们手机上的每个app都离不开这个功能，网通通信已经成为每个app必备的一个最基础的功能，它就像我们日常生活中的水和电一样，如果我们日常生活中没有水和没有电我们生活就没有办法正常进行了，同样道理如果我们的app应用中没有了网络通讯的功能，那么这个app就没有灵魂。<br>csdn视频播放地址：<a target="_blank" rel="noopener" href="https://edu.csdn.net/course/detail/29076">https://edu.csdn.net/course/detail/29076</a></p>
-<p>本课程准备从以下几个章节来讲解：</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://edu.csdn.net/course/play/29076/409953?spm=1002.2001.3001.4143">okhttp的应用详解与源码解析–http的发展史</a></li>
-<li><a target="_blank" rel="noopener" href="https://edu.csdn.net/course/play/29076/409954?spm=1002.2009.3001.4024">okhttp的应用详解与源码解析–android网络通信框架发展史</a></li>
-<li><a target="_blank" rel="noopener" href="https://edu.csdn.net/course/play/29076/409964?spm=1002.2009.3001.4024">okhttp的应用详解与源码解析–springboot服务端搭建</a></li>
-<li><a target="_blank" rel="noopener" href="https://edu.csdn.net/course/play/29076/409977?spm=1002.2009.3001.4024">okhttp的应用详解与源码解析–okhttp客户端应用</a></li>
-<li><a target="_blank" rel="noopener" href="https://edu.csdn.net/course/play/29076/410008?spm=1002.2009.3001.4024">okhttp的应用详解与源码解析–集中式封装</a></li>
-<li><a target="_blank" rel="noopener" href="https://edu.csdn.net/course/play/29076/410011?spm=1002.2009.3001.4024">okhttp的应用详解与源码解析–链式封装</a></li>
-<li><a target="_blank" rel="noopener" href="https://edu.csdn.net/course/play/29076/410012?spm=1002.2009.3001.4024">okhttp的应用详解与源码解析–同步请求源码解析</a></li>
-<li><a target="_blank" rel="noopener" href="https://edu.csdn.net/course/play/29076/410025?spm=1002.2009.3001.4024">okhttp的应用详解与源码解析–异步请求源码解析</a></li>
-<li><a target="_blank" rel="noopener" href="https://edu.csdn.net/course/play/29076/410014?spm=1002.2009.3001.4024">okhttp的应用详解与源码解析–拦截器源码解析</a></li>
-<li><a target="_blank" rel="noopener" href="https://edu.csdn.net/course/play/29076/410015?spm=1002.2009.3001.4024">okhttp的应用详解与源码解析–请求调度机制</a></li>
-<li><a target="_blank" rel="noopener" href="https://edu.csdn.net/course/play/29076/410016?spm=1002.2009.3001.4024">okhttp的应用详解与源码解析–连接池复用机制</a></li>
-<li><a target="_blank" rel="noopener" href="https://edu.csdn.net/course/play/29076/410017?spm=1002.2009.3001.4024">okhttp的应用详解与源码解析–数据缓存机制</a></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/01/Retrofit%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%EF%BC%8C%E5%AE%9E%E6%88%98%E5%BC%80%E5%8F%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="门心叼龙">
-      <meta itemprop="description" content="门心叼龙，门心叼龙的博客">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="门心叼龙的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/01/Retrofit%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%EF%BC%8C%E5%AE%9E%E6%88%98%E5%BC%80%E5%8F%91/" class="post-title-link" itemprop="url">Retrofit视频教程，实战开发</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-11-01 20:31:40 / 修改时间：20:38:16" itemprop="dateCreated datePublished" datetime="2020-11-01T20:31:40+08:00">2020-11-01</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Retrofit/" itemprop="url" rel="index"><span itemprop="name">Retrofit</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>本专栏的同步视频教程已经发布到CSDN学院：</strong><a target="_blank" rel="noopener" href="https://edu.csdn.net/course/detail/30408">https://edu.csdn.net/course/detail/30408</a></p>
-<p>Retrofit和OkHttp一样都是Jake Wharton大神的杰作，他们都是网络通讯框架，只不过Retrofit是对OkHttp的进一步封装，使其调用更加简单方便，读书要读经典，学框架也要学经典，之所以能成为经典，因为它经受住了历史的考验，得到了人们的广泛认可，我们不但要学会用，还要学习它的工作原理，学习框架所体现出来的优秀的设计思想，设计原则，以及脱离框架类似功能的实现方法，本课程共分为六个章节，由易到难，循序渐进，所有的知识点都是自己在多年的Android实战开发中总结出来的精华，涉及到了Retrofit开发中的方方面面，从服务端搭建到客户端验证一整套流程演示给大家，避免了很多教程只讲客户端的使用不讲服务端搭建，要么使用公共的服务端api资源给大家演示，而导致对服务端的实现逻辑一无所知的尴尬，因为服务端和客户端这是一个完整的整体，他们是缺一不可的，这也是本教程的最大特色，希望大家能够喜欢。retrofit是基于okhttp构建的，因此retrofit所有的工作都是围绕RequestBody和ResponseBody展开的，Retrofit可以把一个接口里面定义的方法通过注解的方式把它适配成HTTP的请求命令。</p>
-<h3 id="专栏介绍"><a href="#专栏介绍" class="headerlink" title="专栏介绍"></a>专栏介绍</h3><p>上一期的专栏我们主要给大家介绍了okhttp相关的一些知识点，那么这期的专栏我们将要介绍okhttp的好搭档retrofit，retrofit也是一个网路通信框架，只不过okhttp是基于http的底层框架，而retrofit是对okhttp更进一步的封装，使其调用更加的方便。</p>
-<p>本专栏的具体大纲如下：<br><a target="_blank" rel="noopener" href="https://edu.csdn.net/course/play/30408/440982?spm=1002.2001.3001.4143">retrofit应用详解与源码解析–概述</a><br><a target="_blank" rel="noopener" href="https://edu.csdn.net/course/play/30408/441675?spm=1002.2009.3001.4024">retrofit应用详解与源码解析–小试牛刀</a><br><a target="_blank" rel="noopener" href="https://edu.csdn.net/course/play/30408/440986?spm=1002.2009.3001.4024">retrofit应用详解与源码解析–注解详解</a><br><a target="_blank" rel="noopener" href="https://edu.csdn.net/course/play/30408/440997?spm=1002.2009.3001.4024">retrofit应用详解与源码解析–实战</a><br><a target="_blank" rel="noopener" href="https://edu.csdn.net/course/play/30408/441013?spm=1002.2009.3001.4024">retrofit应用详解与源码解析–源码解析</a></p>
-<p>具体细节如下：</p>
-<h3 id="开宗明义"><a href="#开宗明义" class="headerlink" title="开宗明义"></a>开宗明义</h3><p>大纲简介</p>
-<h3 id="初露锋芒"><a href="#初露锋芒" class="headerlink" title="初露锋芒"></a>初露锋芒</h3><p>服务端定义<br>客户端实现</p>
-<h3 id="大显身手"><a href="#大显身手" class="headerlink" title="大显身手"></a>大显身手</h3><p>注解的分类<br>注解的使用</p>
-<h3 id="奇技淫巧"><a href="#奇技淫巧" class="headerlink" title="奇技淫巧"></a>奇技淫巧</h3><p>请求超时设置<br>日志拦截器的设置<br>网络的缓存设置<br>自定义数据转换器<br>单文件上传<br>多文件上传<br>文件的下载<br>带进度条的文件下载<br>动态的切换多个url<br>添加一个HTTPS的请求<br>动态的添加token访问认证<br>RxJava的结合使用<br>RxJava网络错误通用处理<br>与RxLifecycle的结合使用<br>与Deferred的结合使用<br>与Kotlin协程的结合使用</p>
-<h3 id="源码破解"><a href="#源码破解" class="headerlink" title="源码破解"></a>源码破解</h3><p> Retrofit的创建<br>服务的创建<br>请求命令的创建<br>请求的执行</p>
-<h3 id="九九归一"><a href="#九九归一" class="headerlink" title="九九归一"></a>九九归一</h3><p>设计模式</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">门心叼龙</p>
-  <div class="site-description" itemprop="description">门心叼龙，门心叼龙的博客</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">3</span>
-          <span class="site-state-item-name">日志</span>
+        <a class="logo-title" href="/">
+            ILS
         </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
+
+        <ul class="menu-list">
+            
+                <li class="menu-item">
+                    <a class="active"
+                       href="/"
+                    >
+                        HOME
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/archives"
+                    >
+                        ARCHIVES
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/categories"
+                    >
+                        CATEGORIES
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/tags"
+                    >
+                        TAGS
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/links"
+                    >
+                        LINKS
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/about"
+                    >
+                        ABOUT
+                    </a>
+                </li>
+            
+        </ul>
+
+        <div class="menu-bar">
+            <div class="menu-bar-middle"></div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item">
+                    <a class="active"
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item">
+                    <a class=""
+                       href="/links">LINKS</a>
+                </li>
+            
+                <li class="drawer-menu-item">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+            </div>
+
+            <div class="page-main-content-middle">
+
+                <main class="main-content normal-code-theme">
+
+                    
+                        <div class="home-content-container fade-in-down-animation">
+    <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2020/11/01/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88%EF%BC%9A%E8%AF%B4%E8%AF%B4%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E7%9A%84%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF/">
+                        开发杂谈：说说数据结构和算法的那点事儿
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        
+程序设计的本质是对确定问题选择一个好的数据结构，加上设计一个好的算法，程序设计 = 数据结构 + 算法
+
+本文出自门心叼龙的博客，属于原创类容，转载请注明出处。https://menxindiaolong.blog.csdn.net/article/details/96620117
+上个月我在公司面试了两个Android程序员...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+                    <div class="home-article-meta-info">
+                        <span><i class="fa fa-pencil-square-o"></i> 2020-11-01</span>
+                        
+                            
+                            
+                        
+                    </div>
+                    
+                    <a href="/2020/11/01/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88%EF%BC%9A%E8%AF%B4%E8%AF%B4%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E7%9A%84%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF/">Read more <i class="fa fa-angle-right"></i></a>
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2020/11/01/okhttp%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%EF%BC%8C%E5%BA%94%E7%94%A8%E8%AF%A6%E8%A7%A3%E4%B8%8E%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/">
+                        okhttp视频教程，应用详解与源码解析
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        这期专栏的题目为okhttp的应用详解与源码解析，我们知道okhttp是一个网络通信框架，之所以选择网络通信这个主题，这是因为我们手机上的每个app都离不开这个功能，网通通信已经成为每个app必备的一个最基础的功能，它就像我们日常生活中的水和电一样，如果我们日常生活中没有水和没有电我们生活就没有办法正常进行了，同样道理如果我们的...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+                    <div class="home-article-meta-info">
+                        <span><i class="fa fa-pencil-square-o"></i> 2020-11-01</span>
+                        
+                            
+                            
+                        
+                    </div>
+                    
+                    <a href="/2020/11/01/okhttp%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%EF%BC%8C%E5%BA%94%E7%94%A8%E8%AF%A6%E8%A7%A3%E4%B8%8E%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/">Read more <i class="fa fa-angle-right"></i></a>
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2020/11/01/Retrofit%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%EF%BC%8C%E5%AE%9E%E6%88%98%E5%BC%80%E5%8F%91/">
+                        Retrofit视频教程，实战开发
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        本专栏的同步视频教程已经发布到CSDN学院：https://edu.csdn.net/course/detail/30408
+Retrofit和OkHttp一样都是Jake Wharton大神的杰作，他们都是网络通讯框架，只不过Retrofit是对OkHttp的进一步封装，使其调用更加简单方便，读书要读经典，学框架也要学经典，之...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+                    <div class="home-article-meta-info">
+                        <span><i class="fa fa-pencil-square-o"></i> 2020-11-01</span>
+                        
+                            
+                            
+                        
+                    </div>
+                    
+                    <a href="/2020/11/01/Retrofit%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%EF%BC%8C%E5%AE%9E%E6%88%98%E5%BC%80%E5%8F%91/">Read more <i class="fa fa-angle-right"></i></a>
+                </div>
+            </li>
+        
+    </ul>
+
+    <div class="home-paginator">
+        <div class="paginator">
+    
+
+    
+</div>
+
+    </div>
 </div>
 
 
+                    
+                </main>
 
-      </div>
+            </div>
 
+            <div class="page-main-content-bottom">
+                <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy; 2020 <i class="fa fa-heart-o"></i> <a href="/">XPoet</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a> | Theme <a class="theme-version" target="_blank"></a>
+        </div>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+</footer>
 
-
-      </div>
+            </div>
+        </div>
     </main>
 
-    <footer class="footer">
-      <div class="footer-inner">
+    <div class="sidebar-tools">
+        <div class="tools-container">
+    <ul class="tools-list">
         
 
         
 
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">门心叼龙</span>
+        <!-- TOC aside toggle -->
+        
+
+    </ul>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
-  </div>
 
+    </div>
+
+    <div class="sidebar-tools-2">
+        <div class="tools2-container">
+
+    <button class="tools-button">
+        <i class="fa fa-plus"></i>
+    </button>
+
+    <ul class="tools-wrapper">
+        <!-- back2top -->
+        
+            <li class="tools-item scroll-to-bottom">
+                <i class="fa fa-arrow-down"></i>
+            </li>
+            <li class="tools-item scroll-to-top">
+                <i class="fa fa-arrow-up"></i>
+            </li>
+        
+
+        <!-- mode toggle -->
+        <li class="tools-item mode-toggle">
+            <i class="fa fa-moon-o"></i>
+        </li>
+
+        <!-- rss -->
         
 
 
+    </ul>
+</div>
+
+    </div>
+
+
+    <!-- page aside -->
+    <aside class="page-aside">
+        
+    </aside>
+
+</div>
 
 
 
 
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
 <script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
+<script src="/js/header-shrink.js"></script>
+<script src="/js/dark-light-toggle.js"></script>
+<script src="/js/main.js"></script>
 
 
 
 
 
+    
+<script src="/js/back2top.js"></script>
 
 
 
 
-
-
-
-
-
-
-  
-
-  
 
 </body>
 </html>
